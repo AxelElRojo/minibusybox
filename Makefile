@@ -1,4 +1,5 @@
-CC = gcc
+CROSS_COMPILE =
+CC = $(CROSS_COMPILE)gcc
 CFLAGS = -Wall -Werror
 TARGET = minibusybox
 LIB_PATH = lib
@@ -10,7 +11,7 @@ MAIN = minibusybox.c
 all: $(TARGET)
 
 $(TARGET): main.o libmkdir.so
-	$(CC) $(CFLAGS) $< $(LIBS) -o $@
+	$(CC) $(CFLAGS) $< $(LIBS) -L. -o $@
 main.o: $(MAIN)
 	$(CC) $(CFLAGS) -c $< -o $@
 libmkdir.so: $(LIB_PATH)/mkdir.c $(INCLUDE_PATH)/libmkdir.h
