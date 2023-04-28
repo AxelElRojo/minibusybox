@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "include/libmkdir.h"
+#include "mkdir/libmkdir.h"
 
 int main(int argc, char** argv){
 	// strchr() returns the last appearance of a character

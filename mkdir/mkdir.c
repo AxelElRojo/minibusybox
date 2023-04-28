@@ -1,4 +1,4 @@
-#include "../include/libmkdir.h"
+#include "libmkdir.h"
 int createDirectory(const char* filename){
 	if(mkdir(filename, 0755) == -1)
 		switch(errno){
