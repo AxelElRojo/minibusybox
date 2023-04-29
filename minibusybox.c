@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "mkdir/libmkdir.h"
+#include "touch/libtouch.h"
 
 int main(int argc, char** argv){
 	// strchr() returns the last appearance of a character
@@ -15,8 +15,8 @@ int main(int argc, char** argv){
 	if(strcmp(command, "minibusybox") == 0)
 		printf("Available commands:\n - touch\n - sleep\n - mkdir\n - cat\n");
 	else if(argc == 2){
-		if(strcmp(command, "mkdir") == 0)
-			return createDirectory(argv[1]);
+		if(strcmp(command, "touch") == 0)
+			return touch(argv[1]);
 		else
 			printf("Unknown command\n");
 	}else
